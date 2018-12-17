@@ -1,0 +1,111 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "bulma";
+
+@import "node_modules/font-awesome/scss/font-awesome";
+@import "node_modules/c3/src/scss/main";
+@import "node_modules/jquery-ui/themes/base/theme";
+@import "node_modules/jquery-ui/themes/base/datepicker";
+
+.page-padding {
+	padding-top: .75rem;
+}
+
+.modal .modal-card-foot {
+	justify-content: space-between;
+	flex-direction: row-reverse;
+}
+
+pre.oneline {
+	white-space: nowrap;
+}
+
+.parameter, .important {
+	color: red;
+}
+
+#footer {
+	font-size: small;
+	margin-bottom: 25px;
+	color: inherit;
+}
+
+.api.is-loading {
+	position: relative;
+	pointer-events: none;
+	opacity: 0.5;
+	&:after {
+		@include loader;
+		position: relative;
+		border-width: 0.25em;
+		top: calc(50% - 0.5em);
+		left: calc(50% - 0.5em);
+	}
+}
+
+.stats {
+	.level {
+		margin-bottom: 0;
+	}
+
+	> div.content {
+		margin-bottom: 0 !important;
+	}
+
+	.chart-container.not-first {
+		margin-top: 1.5rem;
+	}
+
+	.inactive-tab-stats {
+		display: none;
+	}
+
+	.title a {
+		color: inherit;
+	}
+}
+
+.home-view {
+	#balanceResult, #adminPoolStateAlert {
+		display: none;
+	}
+
+	p.offset {
+		margin-top: 15px;
+	}
+}
+
+.home-hero {
+	.pool-selection-info {
+		opacity: 0;
+		font-size: 50%;
+		padding: .5rem 0 0 .5rem;
+		cursor: pointer;
+		transition: opacity .1s ease;
+	}
+
+	.dropdown.is-hoverable:hover .pool-selection-info {
+		opacity: 1;
+	}
+}
+
+.miners-view {
+	.is-disabled {
+		background-color: rgb(245, 245, 245);
+	}
+
+	.modal textarea {
+		height: 250px;
+	}
+}
+
+.payouts-listing-view .links {
+	margin-top: 20px;
+}
+
+.admin-view .miners-grouped .tooltip:hover::after, .miners-view .miners-list .miner-address.tooltip:hover::after {
+	white-space: pre-line;
+}
