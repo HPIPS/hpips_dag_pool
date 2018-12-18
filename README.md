@@ -41,6 +41,22 @@
 
 移动友好设计调整
 
+翻译和语言支持，支持简单的CMS（设置页面、其他池文档和类似的）
+
+代码重构，使用存储库和模型演示器，其他改进
+
+添加一些定制网站设计的能力，例如通过允许上传favicon.ico，或者改变bulma主题作为一个整体
+
+# 技能要求
+
+为了运行这个池，您应该在Unix/Linux管理方面很流利，并且对计算机编程有基本的了解。
+
+# 取消请求
+
+请提交具有新特性、改进和/或bug修复的拉动请求。如果需要，使用GitHub问题跟踪器。请注意，为了开发这个池，需要良好的Laravel 5、webpack、mix、.、sass、javascript和bulma经验。所有拉请求必须具有合理的代码质量和安全性。
+
+# 依赖环境
+
 # 开发环境Ubuntu 16.04
 
 # 依赖工具
@@ -53,6 +69,6 @@ sudo apt-get install nginx
 
 sudo apt-get install php7.0-bcmath php7.0-cli php7.0-common php7.0-fpm php7.0-json php7.0-mbstring php7.0-mcrypt php7.0-mysql php7.0-opcache php7.0-readline php7.0-sqlite3 php7.0-xml php7.0-zip autoconf libtool nasm supervisor
 
-## 配置php 设置php.ini memory_limit 设置为 256M, expose_php 设置为 Off, error_reporting 设置为 E_ALL
+#配置php 设置php.ini memory_limit 设置为 256M, expose_php 设置为 Off, error_reporting 设置为 E_ALL
 
 sudo install mysql 5.7
