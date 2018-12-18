@@ -63,7 +63,27 @@
 
 nginx, php7+, mariadb or mysql, nodejs 8.x
 
+# 矿池网站如何运作
+
+池网站定期从池守护程序端脚本获取所需的数据。这些脚本位于单独的存储库中。这些数据在本地存储，然后进行处理。
+
+处理的结果通常存储在数据库中。池在必要时重新读取导入的数据文件。
+
+这意味着泳池网站完全独立于泳池本身。如果池守护程序端不可用，池网站将无休止地显示从池守护程序获得的最新信息。
+
 # 安装步骤
+
+无论是在网站服务器上还是在不同的服务器上。本安装指南将概述如何启动和运行池网站。它不可能深入到每个步骤，但是提供了所有重要的细节。
+
+执行以下步骤以启动和运行网站：
+
+1.将系统时区设置为UTC，执行sudo dpkg-figurationtzdata 并选择UTC
+
+2.安装所有PHP7.0需求，在Ubuntu 16.04执行
+sudo apt-get install php7.0-bcmath php7.0-cli php7.0-common php7.0-fpm php7.0-json php7.0-mbstring php7.0-mcrypt php7.0-mysql php7.0-opcache php7.0-readline php7.0-sqlite3 php7.0-xml php7.0-zip autoconf libtool nasm supervisor
+下一步设置php.ini。设置memory_limit 至少 256M，expose_php 设置 Off ，设置 error_reporting 到 E_ALL.
+
+
 
 sudo apt-get install nginx
 
