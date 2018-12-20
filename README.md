@@ -106,7 +106,7 @@ fastcgi_param SCRIPT_FILENAME /var/www/nginx-default$fastcgi_script_name;
  curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
  sudo apt-get install -y nodejs
  
- 6.把这个项目克隆到/var/www/openxdagpool
+ 6.把这个项目克隆到/var/www/hpips_dag_pool
  
 
 sudo apt-get install php7.0-bcmath php7.0-cli php7.0-common php7.0-fpm php7.0-json php7.0-mbstring php7.0-mcrypt php7.0-mysql php7.0-opcache php7.0-readline php7.0-sqlite3 php7.0-xml php7.0-zip autoconf libtool nasm supervisor
