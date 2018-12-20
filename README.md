@@ -83,9 +83,20 @@ nginx, php7+, mariadb or mysql, nodejs 8.x
 sudo apt-get install php7.0-bcmath php7.0-cli php7.0-common php7.0-fpm php7.0-json php7.0-mbstring php7.0-mcrypt php7.0-mysql php7.0-opcache php7.0-readline php7.0-sqlite3 php7.0-xml php7.0-zip autoconf libtool nasm supervisor
 下一步设置php.ini。设置memory_limit 至少 256M，expose_php 设置 Off ，设置 error_reporting 到 E_ALL.
 
-
-
+3.安装nginx并设置一个PHP FPM运行在自己的矿池下面
 sudo apt-get install nginx
+配置PHP脚本执行文档
+sudo vi /etc/nginx/sites-available/default
+设置 server_name hpips_dag;
+设置 index hpips_dag.php index.html index.htm;
+去掉下面部分的注释用于支持 php 脚本： 
+location ~ \.php$ {
+include /etc/nginx/fastcgi_params; 
+fastcgi_pass 127.0.0.1:9000;
+fastcgi_index hpips_dag.php;
+fastcgi_param SCRIPT_FILENAME /var/www/nginx-default$fastcgi_script_name;
+}
+5.
 
 sudo apt-get install php7.0-bcmath php7.0-cli php7.0-common php7.0-fpm php7.0-json php7.0-mbstring php7.0-mcrypt php7.0-mysql php7.0-opcache php7.0-readline php7.0-sqlite3 php7.0-xml php7.0-zip autoconf libtool nasm supervisor
 
