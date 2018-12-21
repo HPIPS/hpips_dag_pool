@@ -136,7 +136,7 @@ fastcgi_param SCRIPT_FILENAME /var/www/nginx-default$fastcgi_script_name;
  
  8.编辑.env并设置正确的值，阅读注释以获得帮助。电子邮件警报正常工作需要邮件设置。确保为生产使用将APP_DEBUG设置为false。
  
- 9.在 /var/www/openxdagpool, 执行 composer install
+ 9.在 /var/www/hpips_dag_pool, 执行 composer install
  
  cd /var/www/hpips_dag_pool
  
