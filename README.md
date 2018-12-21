@@ -126,11 +126,21 @@ fastcgi_param SCRIPT_FILENAME /var/www/nginx-default$fastcgi_script_name;
  sudo apt-get install -y nodejs
  
  
- 6.把这个项目克隆到/var/www/hpips_dag_pool
+ 6.把这个项目克隆到/var/www/hpips_dag_pool,作为www-data或PHP FPM池运行的其他用户处理
  
  cd /var/www/
  
  sudo git clone https://github.com/HPIPS/hpips_dag_pool.git
+ 
+ 7.sudo cp .env.example .env
+ 
+ 8.编辑.env并设置正确的值，阅读注释以获得帮助。电子邮件警报正常工作需要邮件设置。确保为生产使用将APP_DEBUG设置为false。
+ 
+ 9.在 /var/www/openxdagpool, 执行 composer install
+ 
+ cd /var/www/hpips_dag_pool
+ 
+ sudo composer install
 
 
 sudo apt-get install php7.0-bcmath php7.0-cli php7.0-common php7.0-fpm php7.0-json php7.0-mbstring php7.0-mcrypt php7.0-mysql php7.0-opcache php7.0-readline php7.0-sqlite3 php7.0-xml php7.0-zip autoconf libtool nasm supervisor
