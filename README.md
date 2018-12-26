@@ -142,3 +142,21 @@ fastcgi_param SCRIPT_FILENAME /var/www/nginx-default$fastcgi_script_name;
  
  sudo composer install
 
+10.创建mysql数据库，hpips_dag_pool
+ 
+  执行sudo mysql -u root -p 输入数据库创建密码
+  
+  create database 数据库名;（创建数据库）
+  
+  exit（退出数据库）
+ 
+ 11.修改配置文件.env
+  
+  DB_CONNECTION=mysql
+  DB_HOST=127.0.0.1
+  DB_PORT=3306
+  DB_DATABASE=数据库名
+  DB_USERNAME=root
+  DB_PASSWORD=输入数据库创建密码
+  
+  12.php artisan migrate
