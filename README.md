@@ -153,10 +153,15 @@ fastcgi_param SCRIPT_FILENAME /var/www/nginx-default$fastcgi_script_name;
  11.修改配置文件.env
   
   DB_CONNECTION=mysql
+  
   DB_HOST=127.0.0.1
+  
   DB_PORT=3306
+  
   DB_DATABASE=数据库名
+  
   DB_USERNAME=root
+  
   DB_PASSWORD=输入数据库创建密码
   
   12.php artisan migrate
